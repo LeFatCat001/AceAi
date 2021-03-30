@@ -1,23 +1,42 @@
+##############################################                                _
+#(_) _ __ ___   _ __    ___   _ __ | |_  ___
+#| || '_ ` _ \ | '_ \  / _ \ | '__|| __|/ __|
+#| || | | | | || |_) || (_) || |   | |_ \__ \
+#|_||_| |_| |_|| .__/  \___/ |_|    \__||___/
+#              |_|
+##############################################
 from Package.StrooAi import *
 from playsound import playsound
 import os 
 import time
-
+##############################################
+# / _|(_)| |  ___   _ __    __ _ | |_ | |__  
+#| |_ | || | / _ \ | '_ \  / _` || __|| '_ \ 
+#|  _|| || ||  __/ | |_) || (_| || |_ | | | |
+#|_|  |_||_| \___| | .__/  \__,_| \__||_| |_|
+#                  |_|
+##############################################
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 beep = dir_path + '\sounds\!beep.mp3'
 escaped = dir_path + '\escape.txt'
-
+#############################################
+#   / \     ___   ___    / \   (_)
+#  / _ \   / __| / _ \  / _ \  | |
+# / ___ \ | (__ |  __/ / ___ \ | |
+#/_/   \_\ \___| \___|/_/   \_\|_|
+#############################################
 while True:
     res = obj.mic_input()
     
-    if re.search('ace', res):
-        playsound(beep)
+    if re.search('ace', res): # when someone says ace ai it will activate the bot
+        playsound(beep) # and then playes a beep noice
         bot = 'on'
-        while bot == 'on':
+        while bot == 'on': # after a command is done it will stop the bot and you will have to say ace again
             res = obj.mic_input()
-##################################################################################################################################################
-            if re.search('hello', res):
+
+#-HELLO-AND-HOW-ARE-YOU-CODE#################
+            if re.search('hello', res): # when someone says hello ai it will ask how are you
                 StrooSpeek1d('Hello how are you')
                 for i in range (1):
                     res = obj.mic_input()
@@ -82,11 +101,12 @@ while True:
                     if re.search('ok', res):
                         StrooSpeek1d('thats good')
                         bot = 'off'
-##################################################################################################################################################
+#-GAMES-ESCAPE-THE-ROOM-#####################
+
             if re.search('games', res):
                 StrooSpeek1d('i have a couple games you can play')
                 StrooSpeek1d('1. ascape the room')
-                StrooSpeek1d('2. cards')
+                StrooSpeek1d('more comming soon or later i dont know')
                 for i in range (1):
                     res = obj.mic_input()
                     if re.search('escape the room', res):
@@ -97,6 +117,8 @@ while True:
                             res = obj.mic_input()
                             if re.search('play', res):
                                 StrooSpeek1d('on this game your progress dose not save just say room to get the contents of the room')
+                                
+                                # The Game
                                 while bot == 'on':
                                     res = obj.mic_input()
                                     if re.search('control', res):
