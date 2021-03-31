@@ -1,5 +1,4 @@
 import JarvisAI as StrooAi
-import JarvisAI
 from art import tprint
 import re
 
