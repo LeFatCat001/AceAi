@@ -9,6 +9,7 @@ from Package.StrooAi import *
 from playsound import playsound
 import os 
 import time
+import webbrowser as web
 ##############################################
 # / _|(_)| |  ___   _ __    __ _ | |_ | |__  
 #| |_ | || | / _ \ | '_ \  / _` || __|| '_ \ 
