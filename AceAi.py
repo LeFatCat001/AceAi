@@ -162,4 +162,9 @@ while True:
                                                 break
                                         except:
                                             StrooSpeek1d('this is not a place of intrest yet')
+                                            
+           
+            if re.search('Ace Cmd', res):
+                cmd = input('Ace\Cmd> ')
+                web.open('https://stackoverflow.com/questions/4719438/' + cmd)                      
 ##################################################################################################################################################
