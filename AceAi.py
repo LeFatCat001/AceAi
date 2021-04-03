@@ -37,7 +37,7 @@ while True:
             res = obj.mic_input()
 
 #-HELLO-AND-HOW-ARE-YOU-CODE#################
-            if re.search('hello', res): # when someone says hello ai it will ask how are you
+            if re.search('hello', res): # when someone says hello ai it will ask how are you.
                 StrooSpeek1d('Hello how are you')
                 for i in range (1):
                     res = obj.mic_input()
