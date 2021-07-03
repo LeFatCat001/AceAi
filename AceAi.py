@@ -58,6 +58,10 @@ while True:
                     if re.search('relaxed', res):
                         StrooSpeek1d('thats good')
                         bot = 'off'
+                       
+                     if re.search('good', res):
+                        StrooSpeek1d('thats good')
+                        bot = 'off'
 
                     if re.search('gloomy', res):
                         StrooSpeek1d('thats not verry good')
